@@ -1,0 +1,14 @@
+<template>
+  <require from="filterUsers"></require>
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="">Filtro</label>
+      <input autofocus type="text" class="form-control" value.bind="filtro & debounce:800">
+    </div>
+  </form>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-info"
+        repeat.for="post of posts | filter:filtro">${post.apellido}, ${post.nombre}</li>
+  </ul>
+  <div>${filtro}</div>
+</template>

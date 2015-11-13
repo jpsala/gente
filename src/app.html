@@ -1,0 +1,14 @@
+<template>
+  <require from="nav-bar"></require>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="toastr/build/toastr.min.css"></require>
+  <nav-bar router.bind="router" cargando.bind="cargando"></nav-bar>
+
+  <div class="page-host">
+    <div class="container">
+      <button click.trigger="test()">Toastr</button>
+    </div>
+    <router-view></router-view>
+  </div>
+
+</template>
